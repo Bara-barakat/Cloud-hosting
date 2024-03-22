@@ -2,13 +2,14 @@
     padding: 0;
     margin: 0;
 }
+
 :root{
     --primary-text-color:#45aed6;
     --secondary-text-color:#cdcdcdf6;
 }
 
 nav{
-    height: 7vh;
+    height: 70px;
     background-color: black;
     display: flex;
     justify-content: space-around;
@@ -23,7 +24,6 @@ nav h1{
 }
 
 nav ul li{
-    list-style: none;
     display: inline-block;
 }
 
@@ -32,14 +32,13 @@ nav ul li a{
     color: white;
     text-transform: uppercase;
     font-family: Raleway, sans-serif;
-    padding: 24px 10px;
+    padding: 30px 10px;
     display: inline-block;
 }
 
 nav ul li:hover{
     background-color: var(--primary-text-color);
 }
-
 
 .container{
     background-image: url(img/banner.jpg);
@@ -49,12 +48,12 @@ nav ul li:hover{
     align-items: center;
     text-align: center;
     justify-content: center;
-
 }
 
 .container span{
     color: var(--primary-text-color);
     font-size: 60px;
+
 }
 
 .container h2{
@@ -65,10 +64,13 @@ nav ul li:hover{
 
 .container h3{
     font-size: 30px;
+
 }
 
 .container h2, h3, button{
     color:white;
+    width: 40%;
+
 }
 
 .container button{
@@ -78,6 +80,7 @@ nav ul li:hover{
     cursor: pointer;
     font-size: large;
     background-color: transparent;
+    width: fit-content;
 }
 
 .container button:hover{
@@ -108,7 +111,8 @@ nav ul li:hover{
 .our {
     display: flex;
     justify-content: space-between;
-    height: 18vh;
+    height: 20vh;
+    width: auto;
 }
 
 .our h4 ul{
@@ -126,13 +130,13 @@ nav ul li:hover{
 .about{
     background-color: var(--secondary-text-color);
     height: 60vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
+
 
 .about h2{
     color: var(--primary-text-color);
@@ -143,6 +147,7 @@ nav ul li:hover{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 80%;
 }
 
 .us div{
@@ -170,8 +175,8 @@ nav ul li:hover{
 }
 
 .pric{
-    height: 70vh;
-
+    height: 60vh;
+    width: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,57 +186,54 @@ nav ul li:hover{
 .pric h2{
     color: var(--primary-text-color);
     font-size: 50px;
-    padding: 10px;
-}
-
-.pric .C{
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
 }
 
 .pric .con{
     height: 12vh;
-    width: 280px;
+    width: 240px;
     background-color: var(--primary-text-color);
-    color: white;
     font-size: large;
-    padding-top: 30px;
+    padding-top: 20px;
     margin-top: 40px;
 
 }
 
-.pric .con h2{
+.pric .con h2, h3, p{
+    width: auto;
     color: white;
-    font-size: xx-large;
-    padding-top: 16px;
 }
 
-.pric .con .B div{
-    height: 34vh;
-    width: 280px;
+.pric .con div{
+    width: 240px;
     background-color: var(--secondary-text-color);
+    height: 33vh;
+}
+
+.pric .con div p{
+    padding: 7px;
     color: black;
-    font-size: large;
 }
 
-.pric .con .B div p{
-    padding-top: 20px;
-}
-
-.pric .con .B div button{
+.pric .con div button{
     padding: 10px;
     margin: 16px;
-    border: 1px solid ;
+    border: 1px solid;
     cursor: pointer;
     font-size: large;
     background-color: var(--primary-text-color);
 }
 
-
-.pric .con:first-child, .pric .con:nth-child(3){
+.pric .con:first-of-type{
     background-color: black;
+}
+.pric .con:last-child{
+    background-color: black;
+}
+
+.pric .c{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:  2%;
 }
 
 .business{
@@ -308,6 +310,10 @@ nav ul li:hover{
     font-size: xx-large;
 }
 
+.n p{
+    color: black;
+}
+
 
 .contact{
     height: 48vh;
@@ -342,6 +348,7 @@ nav ul li:hover{
     padding:0 7px 8px 0;
 }
 
+
 i{
     margin-left: 40px;
 }
@@ -351,7 +358,7 @@ i{
     padding: 7px;
     margin: 7px;
     outline: none;
-    width: 400px;
+    width: 300px;
 }
 
 .i button{
@@ -365,11 +372,12 @@ i{
 
 .i textarea{
     max-height: 87px;
-    max-width: 417px;
+    max-width: 317px;
     margin: 0 0 10px 8px;
     display: block;
 
 }
+
 
 footer{
     height: 7vh;
@@ -386,94 +394,68 @@ footer h2{
 }
 
 
-@media only screen and (max-width: 700px) {
 
-    nav ul li a{
+@media (max-width: 1000px) {
+    nav{
+        flex-direction: column;
+        height: 12vh;
+    }
+
+    nav ul{
         font-size: 10px;
     }
 
-    .container h2, h3{
-        font-size: xx-large;
-    }
-
-    .serv{
-        display: none;
-    }
-
-    .us img{
-        height: 200px;
-    }
-    
-    .us h4{
-        font-size: 12px;
-    }
-
-    .pric .C {
-        grid-template-columns: 1fr 1fr;
-    }
-    .pric .C .con:nth-child(3){
-        display: none;
-    }
-    
-    .pric .C .con:last-child{
-        display: none;
-    }
-
-    .A {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .team{
-        height: 880px;
-    }
-
-    footer h2{
-        font-size: large;
-    }
-}
-
-
-
-
-@media only screen and (max-width: 1000px) and (min-width: 701px)  {
-
     nav ul li a{
-        font-size: 16px;
+        padding: 24px 10px;
     }
 
-    .container h2, h3{
-        font-size: xx-large;
+    .feat .our img{
+        width: 180px;
     }
 
     .serv{
         display: none;
     }
 
-    .us img{
-        height: 200px;
-    }
-    
-    .us h4{
-        font-size: 12px;
+    .about .us img{
+        width: 180px;
     }
 
-    .pric .C {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    .pric .C .con:nth-child(3){
-        display: none;
-    }
-    
-    .pric .C .con:last-child{
+    .about .us div :nth-child(3){
         display: none;
     }
 
-    .A {
+    .pric .c{
         grid-template-columns: 1fr 1fr;
     }
 
-    .team{
-        height: 880px;
+    .pric .c .con:nth-child(3), .pric .c .con:nth-child(4){
+        display: none;
     }
 
+    .pric .con div {
+        height: 34vh;
+    }
+
+    .pric {
+        height: 64vh;
+    }
+
+    .business {
+        height: 37vh;
+    }
+
+    .team{
+        height: 102vh;
+    }
+
+    .team .A{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer{
+        font-size: 14px;
+    }
 }
+
+
